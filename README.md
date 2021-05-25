@@ -1,7 +1,9 @@
 # Docker-compose
 
 # Database
-![Ubuntu 64-bit - VMware Workstation 5_25_2021 8_56_29 PM (3)](https://user-images.githubusercontent.com/84364894/119502904-01a46c00-bd9d-11eb-8407-c37074e646a9.png)
+![Ubuntu 64-bit - VMware Workstation 5_25_2021 9_54_59 PM (2)](https://user-images.githubusercontent.com/84364894/119511633-33213580-bda5-11eb-9e8a-48b87e75ce1b.png)
 
 # Consumer
-![Ubuntu 64-bit - VMware Workstation 5_25_2021 8_54_43 PM (3)](https://user-images.githubusercontent.com/84364894/119502859-f6514080-bd9c-11eb-92cc-07e11e5ca9ac.png)
+![Ubuntu 64-bit - VMware Workstation 5_25_2021 9_54_46 PM (2)](https://user-images.githubusercontent.com/84364894/119511687-3ddbca80-bda5-11eb-9a1f-561a98f3cb2a.png)
+
+
