@@ -7,11 +7,10 @@ import json
 import sys
 
 
-#Flask Part
 app = Flask(__name__)
 data = {"key":"This is default"}
 
-#database part
+
 myclient = pymongo.MongoClient("mongodb://192.168.35.128:27017/")
 mydb = myclient["mydatabase"]
 mycol = mydb["key"]
