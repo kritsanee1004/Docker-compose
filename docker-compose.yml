@@ -1,12 +1,7 @@
 version: '3.9'
 
 services:
-
-  #nginx:
-    #image: nginx
-    #ports: 
-     # - "80:80"
-  
+ 
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq
@@ -33,15 +28,6 @@ services:
     links:
       - rabbitmq
 
-  #list_user:
-   # container_name: list_user
-    #build: list_user/
-    #ports:
-     # - "5001:5000"
-   # links:
-    #  - mongodb2
-
-
   mongodb1:
     container_name: mongodb1
     image: mongo
@@ -49,15 +35,6 @@ services:
       - "./db:/data/db"
     ports:
       - 27017:27017
-
-
-  #mongodb2:
-   # container_name: mongodb2
-    #image: mongo
-    #volumes:
-     # - "./db:/data2/db"
-   # ports:
-    #  - 27018:27017
 
 networks:
    my-mongo-cluster:
