@@ -12,21 +12,40 @@ $ docker-compose build
 $ docker-compose up -d
 
 ```
+### Start service
+```sh
+$ docker exec -it insert-mongodb1 bash
+
+mongo insert-mongodb1:27041
+
+> cfg={
+{
+	"_id" : "RS",
+	"members" : [
+		{
+			"_id" : 0,
+			"host" : "insert-mongodb1:27041"
+		},
+		{
+			"_id" : 1,
+			"host" : "query-mongodb2:27041"
+		},
+		{
+			"_id" : 2,
+			"host" : "query-mongodb3:27041"
+		}
+	]
+}
+> rs.initiate(cfg);
+{ "ok" : 1 }
+RS:SECONDARY> rs.status()
+
+
+```
 ### Stop service :
 
 ```sh
 $ docker-compose down
 ```
-
-### Access a running container :
-```sh
-$ docker-compose exec $SERVICE_NAME bash
-```
-
-### Database :
-![Ubuntu 64-bit - VMware Workstation 5_25_2021 9_54_59 PM (2)](https://user-images.githubusercontent.com/84364894/119511633-33213580-bda5-11eb-9e8a-48b87e75ce1b.png)
-
-### Consumer :
-![Ubuntu 64-bit - VMware Workstation 5_25_2021 9_54_46 PM (2)](https://user-images.githubusercontent.com/84364894/119511687-3ddbca80-bda5-11eb-9a1f-561a98f3cb2a.png)
 
 
