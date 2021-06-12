@@ -1,7 +1,7 @@
 import pymongo
 import json
 
-def db_all(mycol):
+def db_all(users):
     db_list = []
     for x in mycol.find():
         data = str(x).replace("ObjectID(","")
@@ -11,9 +11,10 @@ def db_all(mycol):
         data = data.replace('}"','')
         db_list.append(json.loads(data))
     return db_list
-def main(db_add):
+
+def main(host_ip):
     db_add = "mongodb2://192.168.35.128:27018/"
     myclient = pymongo.MongoClient(db_add)
-    mydb = myclient["mydatabase2"]
+    mydb = myclient["mydatabase"]
     mycol = mydb["key"]
-    return db_all(mycol)
+    return db_all(users)
