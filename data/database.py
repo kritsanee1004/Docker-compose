@@ -1,10 +1,10 @@
 import pymongo
 
-myclient = pymongo.MongoClient("mongodb://192.168.35.128:27017/")
-mydb = myclient["mydatabase"]
-mycol = mydb["key"]
+def insert_db(message, db_ip):
+    myclient = pymongo.MongoClient("mongodb://"+db_ip+":27017/")
+    mydb = myclient["mydatabase"]
+    users = mydb["key"]
 
-def insert_db(message):
-    my_dict = {"message": message}
-    x = mycol.insert_one(my_dict)
+    my_dict = {"data":message}
+    x = users.insert_one(my_dict)
     return x.inserted_id
