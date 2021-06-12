@@ -2,3 +2,4 @@ pika
 pymongo
 flask
 flasgger
+bcrypt
